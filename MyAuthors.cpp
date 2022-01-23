@@ -23,3 +23,12 @@ MyAuthors::MyAuthors()
 	cout << "Constructing MyAuthors instance with capacity of " << capacity << endl;
 	
 }
+
+//deallocates any dynamic memory
+MyAuthors::~MyAuthors()
+{
+	delete[] authors;
+	//text to illustrate program execution
+	// comment out for final run
+	cout << "Destructor for MyAuthors called to deallocate dynamic memory." << endl;
+}

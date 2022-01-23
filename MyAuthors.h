@@ -29,7 +29,7 @@ public:
 	MyAuthors(const MyAuthors& rhs);
 	//destructor
 	//destroys dynamic data
-	//~MyAuthors();
+	~MyAuthors();
 	//display the list of authors
 	void showList()const;
 	//add the authors from rhs to this object
