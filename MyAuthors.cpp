@@ -85,6 +85,19 @@ void MyAuthors::showList() const
 	}
 }
 
+void MyAuthors::addAuthors(const MyAuthors& rhs)
+{
+	//add the authors from rhs to this object's authors[]
+
+	//iterate over the authors in rhs
+	for (int i = 0; i < rhs.count; i++) {
+		//add author rhs[i] to this list
+		//use the member function addAuthor
+		//addAuthor guarantees the capacity
+		addAuthor(rhs.authors[i]);
+	}
+}
+
 void MyAuthors::addAuthor(string theAuthor)
 {
 	//is there room for another?

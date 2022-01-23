@@ -22,6 +22,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "MyAuthors.h"
 
 using namespace std;
@@ -29,14 +30,22 @@ using namespace std;
 int main() {
 
 	MyAuthors authorList;
-	string author = "Sandburg, Carl";
-	authorList.addAuthor(author);
-	author = "White, E. B.";
-	authorList.addAuthor(author);
-	authorList.showList();
+	
+	//read author data from a file
+	ifstream fin("Text.txt");
+	if (!fin) {
+		cout << "File not found\n";
+		exit(10);
+	}
+	string str;
+	while (getline(fin, str)) {
+		authorList.addAuthor(str);
+	}
 
+	//make a copy of authorList
 	MyAuthors yourList(authorList);
 
+	//display the list
 	yourList.showList();
 
 	return 0;
