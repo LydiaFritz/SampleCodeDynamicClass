@@ -58,12 +58,14 @@ MyAuthors::MyAuthors(const MyAuthors& rhs)
 	//set count
 	count = rhs.count;
 	//make the array
-	authors = new string[capacity];
+	authors = new string[rhs.capacity];
 
 	//copy the authors from rhs to this object
 	for (int i = 0; i < count; i++) {
+		
 		authors[i] = rhs.authors[i];
 	}
+	cout << "Constructing a new object that is a copy of rhs" << endl;
 }
 
 //deallocates any dynamic memory
