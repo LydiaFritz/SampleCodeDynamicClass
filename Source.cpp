@@ -20,7 +20,15 @@
 * in detail.
 */
 
+#include <iostream>
+#include <string>
+#include "MyAuthors.h"
+
+using namespace std;
+
 int main() {
+
+	MyAuthors authorList;
 
 	return 0;
 }
