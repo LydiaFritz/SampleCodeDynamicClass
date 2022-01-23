@@ -34,6 +34,8 @@ public:
 	void showList()const;
 	//add the authors from rhs to this object
 	void addAuthors(const MyAuthors& rhs);
+	//add author
+	void addAuthor(string theAuthor);
 
 };
 

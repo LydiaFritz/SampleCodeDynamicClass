@@ -29,6 +29,10 @@ using namespace std;
 int main() {
 
 	MyAuthors authorList;
+	string author = "Sandburg, Carl";
+	authorList.addAuthor(author);
+	author = "White, E. B.";
+	authorList.addAuthor(author);
 
 	return 0;
 }

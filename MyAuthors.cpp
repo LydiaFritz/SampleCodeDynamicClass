@@ -57,3 +57,13 @@ MyAuthors::~MyAuthors()
 	// comment out for final run
 	cout << "Destructor for MyAuthors called to deallocate dynamic memory." << endl;
 }
+
+void MyAuthors::addAuthor(string theAuthor)
+{
+	//is there room for another?
+	if (capacity == count)
+		resize();
+	//add this author to the end of the list
+	//count is updated 
+	authors[count++] = theAuthor;
+}
