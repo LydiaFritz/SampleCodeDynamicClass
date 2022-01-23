@@ -19,3 +19,8 @@
 * The class, MyAuthors.cpp, contains comments explaining each of the above methods 
 * in detail.
 */
+
+int main() {
+
+	return 0;
+}
