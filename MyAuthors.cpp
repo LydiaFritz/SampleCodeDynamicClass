@@ -49,6 +49,23 @@ MyAuthors::MyAuthors()
 	
 }
 
+MyAuthors::MyAuthors(const MyAuthors& rhs)
+{
+	//create a new object that is a copy of rhs
+
+	//set capacity
+	capacity = rhs.capacity;
+	//set count
+	count = rhs.count;
+	//make the array
+	authors = new string[capacity];
+
+	//copy the authors from rhs to this object
+	for (int i = 0; i < count; i++) {
+		authors[i] = rhs.authors[i];
+	}
+}
+
 //deallocates any dynamic memory
 MyAuthors::~MyAuthors()
 {
@@ -56,6 +73,14 @@ MyAuthors::~MyAuthors()
 	//text to illustrate program execution
 	// comment out for final run
 	cout << "Destructor for MyAuthors called to deallocate dynamic memory." << endl;
+}
+
+void MyAuthors::showList() const
+{
+	//display the authors
+	for (int i = 1; i <= count; i++) {
+		cout << i << ". " << authors[i - 1] << endl;
+	}
 }
 
 void MyAuthors::addAuthor(string theAuthor)

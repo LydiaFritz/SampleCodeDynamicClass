@@ -33,6 +33,11 @@ int main() {
 	authorList.addAuthor(author);
 	author = "White, E. B.";
 	authorList.addAuthor(author);
+	authorList.showList();
+
+	MyAuthors yourList(authorList);
+
+	yourList.showList();
 
 	return 0;
 }
